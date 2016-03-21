@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui version="4.0">
+ <class>kompositor_v2Class</class>
+ <widget class="QMainWindow" name="kompositor_v2Class">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>529</width>
+    <height>382</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>kompositor_v2</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>0</y>
+      <width>211</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kompositionsprogram for the deaf</string>
+    </property>
+    <property name="half.png" stdset="0">
+     <pixmap>Resources/half.png</pixmap>
+    </property>
+    <property name="quarter.png" stdset="0">
+     <pixmap>Resources/quater.png</pixmap>
+    </property>
+    <property name="eight.png" stdset="0">
+     <pixmap>Resources/eight.png</pixmap>
+    </property>
+    <property name="quarterest" stdset="0">
+     <pixmap>Resources/quaterrest.png</pixmap>
+    </property>
+    <property name="eightest.png" stdset="0">
+     <pixmap>Resources/eightrest.png</pixmap>
+    </property>
+    <property name="notblad.png" stdset="0">
+     <pixmap>Resources/notblad.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="halfNote">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Half</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>Resources/half.png</normalon>
+     </iconset>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="quarterNote">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Quarter</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>Resources/quater.png</normalon>
+     </iconset>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="eightNote">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>70</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Eight</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>Resources/eight.png</normalon>
+     </iconset>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="quarterestNote">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>70</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Quarterest</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>Resources/quaterrest.png</normalon>
+     </iconset>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="eightrestNote">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>70</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Eightrest</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>Resources/eightrest.png</normalon>
+     </iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="playButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>280</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PLAY</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sheet">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>491</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Resources/notblad.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>529</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="kompositor_v2.qrc"/>
+ </resources>
+ <connections/>
+</ui>
