@@ -50,9 +50,6 @@
     <ClCompile Include="GeneratedFiles\qrc_kompositor_v2.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="Kompositor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Synthesizer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -74,9 +71,6 @@
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_kompositor_v2.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Kompositor.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Synthesizer.h">
       <Filter>Header Files</Filter>

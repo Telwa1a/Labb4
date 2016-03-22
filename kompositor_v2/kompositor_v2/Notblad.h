@@ -15,7 +15,6 @@ public:
 
 
 	void adderaNot(int typ, int höjd);//Vi måste göra en klass som kan hantera de olika noterna??
-
 	//void hämtaNoter() : vector <Not*>
 
 	//private:
