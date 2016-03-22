@@ -25,7 +25,7 @@ class kompositor_v2 : public QMainWindow
 		~kompositor_v2();
 
 		int notTypVal;
-		
+
 		void mousePressEvent(QMouseEvent* e);
 		int pixelToHöjd(int ypixel);
 		//int pixelToLängd(int xpixel);
@@ -38,6 +38,7 @@ class kompositor_v2 : public QMainWindow
 		Ui::kompositor_v2Class ui;
 		Synthesizer synth;
 		Notblad notblad;
+};
 
 
 #endif // KOMPOSITOR_V2_H
