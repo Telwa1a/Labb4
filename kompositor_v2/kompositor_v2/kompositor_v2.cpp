@@ -37,13 +37,14 @@ int kompositor_v2::pixelToHöjd(int ypixel)
 }
 
 
-
-
-void kompositor_v2::ritaOm()
+void kompositor_v2::ritaOm()//vad har denna för funktion? visas inte i något sekvensdiagram.
 {
 
 }
-void kompositor_v2::paintEvent()
+
+void kompositor_v2::paintEvent(QPaintEvent * e)
 {
+	for (int i = 0; i < notTypVal.size(); i++)
+		notTypVal[i]->paint(this);
 
 }

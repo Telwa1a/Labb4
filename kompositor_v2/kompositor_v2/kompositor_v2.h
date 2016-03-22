@@ -17,15 +17,13 @@ public:
 
 	void mousePressEvent(QMouseEvent *e);
 
-
-
-
 	int pixelToHöjd(int ypixel);
 
-
 	void ritaOm();
+
 	void fjärdedelsnotKlickad();
-	void paintEvent();
+
+	void paintEvent(QPaintEvent * e);
 
 private:
 	Ui::kompositor_v2Class ui;
