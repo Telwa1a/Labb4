@@ -46,7 +46,15 @@ void kompositor_v2::paintEvent(QPaintEvent * e)
 
 }
 
-int kompositor_v2::pixelToHöjd(int ypixel)
+void kompositor_v2::mousePressEvent(QMouseEvent *e)
+{
+	int hojd = pixelToHöjd(e->y());
+}
+
+
+
+
+kompositor_v2::pixelToHöjd(int ypixel)
 {
 	float enivå = 413;
 	float step = 8;

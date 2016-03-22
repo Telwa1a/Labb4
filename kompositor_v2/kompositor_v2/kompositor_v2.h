@@ -4,9 +4,9 @@
 #define KOMPOSITOR_V2_H
 
 #include <QtWidgets/QMainWindow>
+#include <QtGui>
 #include "ui_kompositor_v2.h"
 #include <QTimer>
-#include <QtGui>
 #include <vector>
 
 #include "Synthesizer.h"
@@ -39,9 +39,5 @@ class kompositor_v2 : public QMainWindow
 		Synthesizer synth;
 		Notblad notblad;
 
-	//private slots:
-		//void update();
-		//void push();
-};
 
 #endif // KOMPOSITOR_V2_H
