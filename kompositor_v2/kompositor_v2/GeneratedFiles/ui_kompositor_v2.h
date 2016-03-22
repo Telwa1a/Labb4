@@ -45,7 +45,7 @@ public:
     {
         if (kompositor_v2Class->objectName().isEmpty())
             kompositor_v2Class->setObjectName(QStringLiteral("kompositor_v2Class"));
-        kompositor_v2Class->resize(529, 382);
+        kompositor_v2Class->resize(1010, 519);
         centralWidget = new QWidget(kompositor_v2Class);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
@@ -89,15 +89,15 @@ public:
         eightrestNote->setIcon(icon4);
         playButton = new QPushButton(centralWidget);
         playButton->setObjectName(QStringLiteral("playButton"));
-        playButton->setGeometry(QRect(220, 280, 75, 23));
+        playButton->setGeometry(QRect(460, 210, 75, 21));
         sheet = new QLabel(centralWidget);
         sheet->setObjectName(QStringLiteral("sheet"));
-        sheet->setGeometry(QRect(10, 100, 491, 181));
+        sheet->setGeometry(QRect(100, 300, 931, 143));
         sheet->setPixmap(QPixmap(QString::fromUtf8("Resources/notblad.png")));
         kompositor_v2Class->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(kompositor_v2Class);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 529, 21));
+        menuBar->setGeometry(QRect(0, 0, 1010, 21));
         kompositor_v2Class->setMenuBar(menuBar);
         mainToolBar = new QToolBar(kompositor_v2Class);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
