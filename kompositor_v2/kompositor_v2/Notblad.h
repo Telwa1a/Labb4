@@ -14,9 +14,9 @@ public:
 	Notblad();
 
 
-	void adderaNot(typ, int höjd);//Vi måste göra en klass som kan hantera de olika noterna??
+	void adderaNot(int typ, int höjd);//Vi måste göra en klass som kan hantera de olika noterna??
 
-	void hämtaNoter() : vector <Not*>
+	//void hämtaNoter() : vector <Not*>
 
 	//private:
 

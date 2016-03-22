@@ -1,26 +1,18 @@
 #pragma once
+#include <windows.h>   /* required before including mmsystem.h */
+#include <mmsystem.h>  /* multimedia functions (such as MIDI) for Windows */
+#include <iostream>
+#include <chrono>
+#include <thread>
 
-/**
-* A class representing a point in a three-dimensional plane.
-*
-* This class represents a point in a three-dimensional plane with an x-axes,
-* y-axes and z-axes.
-*/
 class Synthesizer
 {
-
-public:
-
-	Synthesizer();
-
-
-
-	void spela(int höjd, int längd, int volym);
-
-	
-	//private:
-
-
+	public:
+		Synthesizer(int intrument = 0);
+		void spela(int höjd, int längd, int volym);
+	private:
+		int Synthesizer::höjdtomidi(int höjd);
+		HMIDIOUT device;
 };
 
 
