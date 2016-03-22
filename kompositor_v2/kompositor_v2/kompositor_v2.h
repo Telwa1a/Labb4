@@ -26,7 +26,6 @@ public:
 
 	void mousePressEvent(QMouseEvent *e);
 
-	void mousePressEvent(QMouseEvent* e);
 	int pixelToHöjd(int ypixel);
 		//int pixelToLängd(int xpixel);
 		void ritaOm();

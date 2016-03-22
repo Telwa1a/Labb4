@@ -90,6 +90,7 @@
     </ClCompile>
     <ClCompile Include="kompositor_v2.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Not.cpp" />
     <ClCompile Include="Notblad.cpp" />
     <ClCompile Include="Synthesizer.cpp" />
   </ItemGroup>
@@ -119,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_kompositor_v2.h" />
+    <ClInclude Include="Not.h" />
     <ClInclude Include="Notblad.h" />
     <ClInclude Include="Synthesizer.h" />
   </ItemGroup>
@@ -133,6 +135,20 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\eight.png" />
+    <Image Include="Resources\eightc.png" />
+    <Image Include="Resources\eightpause.png" />
+    <Image Include="Resources\eightrest.png" />
+    <Image Include="Resources\half.png" />
+    <Image Include="Resources\halfc.png" />
+    <Image Include="Resources\notblad.png" />
+    <Image Include="Resources\Paus.png" />
+    <Image Include="Resources\quater.png" />
+    <Image Include="Resources\quaterc.png" />
+    <Image Include="Resources\quaterpause.png" />
+    <Image Include="Resources\quaterrest.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,3 +4,8 @@ Notblad::Notblad()
 {
 
 }
+
+vector<Not*> Notblad::hämtaNoter()
+{
+	return notVector;
+}

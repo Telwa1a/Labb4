@@ -1,5 +1,6 @@
 #pragma once
 #include "Synthesizer.h"
+#include <qwidget.h>
 /**
 * A class representing a point in a three-dimensional plane.
 *
@@ -13,13 +14,15 @@ public:
 
 	Not();
 	Not(int längd, int höjd);
-	int skrivUt(int xPos);
+	void skrivUt(int xPos, QWidget *qw);
 	int skrivUtC(int xPos);
 	void spelaUpp(Synthesizer);
 
-		int längd;
-		int höjd;
-		//private:
+		
+private:
+	int längd;
+	int höjd;
+	QPixmap _bildNot;
 
 
 };

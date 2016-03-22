@@ -15,16 +15,18 @@ kompositor_v2::~kompositor_v2()
 
 void kompositor_v2::mousePressEvent(QMouseEvent *e)
 {
+	update();// är som repaint, fast bättre(jonny sa det) / kör paintEvent()
+
 	if (e->MouseButtonRelease)
 	{
 		if (ui.sheet->isEnabled()) //FIXA TILL KORREKT FUNKTION - GOTTA READ SHIT UP ON LABELS
 		{
-	int hojd = pixelToHöjd(e->y());
-			//TODO: LÄGG TILL I NOTLISTA
-			if (hojd = -1)
-				return;
+			int hojd = pixelToHöjd(e->y());
+					//TODO: LÄGG TILL I NOTLISTA
+					if (hojd = -1)
+						return;
 
-			//notblad.adderaNot(1, hojd);
+					//notblad.adderaNot(1, hojd);
 		}
 
 		if (ui.quarterNote->isEnabled()) //DITO
@@ -43,8 +45,16 @@ void kompositor_v2::ritaOm()//vad har denna för funktion? visas inte i något sek
 
 void kompositor_v2::paintEvent(QPaintEvent * e)
 {
-	for (int i = 0; i < notTypVal.size(); i++)
-		notTypVal[i]->paint(this);
+
+	//Not nyTestNot(500, 6); // Test not, för att se att det funkar att skriva ut 
+	//nyTestNot.skrivUt(100, this); // Hårdkodat 100 som test värde
+
+	vector<Not*> notVector = notblad.hämtaNoter();
+
+	for (int i = 0; i < notVector.size(); i++)
+	notVector[i]->skrivUt(100, this);
+
+	
 }
 
 int kompositor_v2::pixelToHöjd(int ypixel)
