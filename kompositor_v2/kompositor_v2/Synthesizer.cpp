@@ -8,19 +8,19 @@ Synthesizer::Synthesizer(int instrument)
 	midiOutShortMsg(device, DWORD(0x0C0 | 0 | (instrument << 8) | (0 << 16)));
 }
 
-void Synthesizer::spela(int höjd, int längd, int volym)
+void Synthesizer::spela(int hojd, int lengd, int volym)
 {
-	midiOutShortMsg(device, DWORD(0x090 | 0 | (höjdtomidi(höjd) << 8) | (volym << 16)));
-	std::chrono::milliseconds dur(längd);
+	midiOutShortMsg(device, DWORD(0x090 | 0 | (hojdtomidi(hojd) << 8) | (volym << 16)));
+	std::chrono::milliseconds dur(lengd);
 	std::this_thread::sleep_for(dur);
-	midiOutShortMsg(device, DWORD(0x090 | 0 | (höjdtomidi(höjd) << 8) | (0 << 16)));
+	midiOutShortMsg(device, DWORD(0x090 | 0 | (hojdtomidi(hojd) << 8) | (0 << 16)));
 }
 
-int Synthesizer::höjdtomidi(int höjd)
+int Synthesizer::hojdtomidi(int hojd)
 {
 	int midinr = 60;
 
-	switch (höjd)
+	switch (hojd)
 	{
 		case 0: midinr = 60; break;
 		case 1: midinr = 62; break;

@@ -1,13 +1,12 @@
 #include "Not.h"
 #include <qpainter>
 
-
-Not::Not(int längd, int höjd)
+Not::Not(int lengd, int hojd)
 {
-	this->längd = längd;
-	this->höjd = höjd;
+	this->lengd = lengd;
+	this->hojd = hojd;
 
-	if (höjd > 0)
+	if (hojd > 0)
 	{
 		_bildNot.load("Resources/quater.png");
 	}
@@ -25,8 +24,11 @@ void Not::skrivUt(int xPos, QWidget *qw)
 	qPainter.drawPixmap(xPos, 100, _bildNot);
 
 }
+
 //int Not::skrivUtC(int xPos){}
-void Not::spelaUpp(Synthesizer){}
+void Not::spelaUpp(Synthesizer)
+{
+}
 
 
 //testtesttest

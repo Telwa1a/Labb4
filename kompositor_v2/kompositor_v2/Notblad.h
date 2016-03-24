@@ -19,7 +19,7 @@ public:
 
 
 	//void adderaNot(int typ, int höjd);//Vi måste göra en klass som kan hantera de olika noterna??
-	vector<Not*> hämtaNoter();
+	vector<Not*> hamtaNoter();
 
 private:
 	vector<Not*> notVector;

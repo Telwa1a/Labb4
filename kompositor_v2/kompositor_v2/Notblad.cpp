@@ -5,7 +5,7 @@ Notblad::Notblad()
 
 }
 
-vector<Not*> Notblad::hämtaNoter()
+vector<Not*> Notblad::hamtaNoter()
 {
 	return notVector;
 }

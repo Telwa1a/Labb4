@@ -13,15 +13,15 @@ class Not
 public:
 
 	Not();
-	Not(int längd, int höjd);
+	Not(int lengd, int hojd);
 	void skrivUt(int xPos, QWidget *qw);
 	int skrivUtC(int xPos);
 	void spelaUpp(Synthesizer);
 
 		
 private:
-	int längd;
-	int höjd;
+	int lengd;
+	int hojd;
 	QPixmap _bildNot;
 
 
