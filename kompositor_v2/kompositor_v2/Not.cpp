@@ -1,10 +1,22 @@
 #include "Not.h"
 #include <qpainter>
 
-Not::Not(int lengd, int hojd)
+Not::Not()
 {
-	this->lengd = lengd;
-	this->hojd = hojd;
+	lengd = 1000;
+	hojd = -1;
+}
+
+Not::Not(int _hojd)
+{
+	lengd = 1000;
+	hojd = _hojd;
+}
+
+Not::Not(int _lengd, int _hojd)
+{
+	lengd = _lengd;
+	hojd = _hojd;
 
 	if (hojd > 0)
 	{
@@ -13,10 +25,8 @@ Not::Not(int lengd, int hojd)
 	else
 	{
 		_bildNot.load("Resources/quaterc.png");
-	}
-	
+	}	
 }
-
 
 void Not::skrivUt(int xPos, QWidget *qw)
 {

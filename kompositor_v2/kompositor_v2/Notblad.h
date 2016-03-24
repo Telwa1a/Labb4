@@ -13,17 +13,17 @@ using namespace std;
 class Notblad
 {
 
-public:
+	public:
 
-	Notblad();
+		Notblad();
 
+		//void adderaNot(int typ, int höjd);//Vi måste göra en klass som kan hantera de olika noterna??
+		vector<Not*> hamtaNoter();
+		void adderaNot(int typ, int _hojd);
 
-	//void adderaNot(int typ, int höjd);//Vi måste göra en klass som kan hantera de olika noterna??
-	vector<Not*> hamtaNoter();
+	private:
 
-private:
-	vector<Not*> notVector;
-
+		vector<Not*> notVector;
 
 };
 

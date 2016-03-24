@@ -30,7 +30,7 @@ class kompositor_v2 : public QMainWindow
 		int pixelToHojd(int ypixel);
 		//int pixelToLängd(int xpixel);
 		void ritaOm();
-		void fjardedelsnotKlickad();
+		//void fjardedelsnotKlickad();
 
 		QTimer * timer;
 
@@ -39,11 +39,11 @@ class kompositor_v2 : public QMainWindow
 		Ui::kompositor_v2Class ui;
 		Synthesizer synth;
 		Notblad notblad;
-		int notTypVal;
+		int notTypVal = -1; //INGA NOTKNAPPAR HAR TRYCKTS IN
 		bool willDraw = false;
 
-	//private slots:
-
+	private slots:
+		void fjardedelsnotKlickad();
 		//void update();
 		//void push();
 };

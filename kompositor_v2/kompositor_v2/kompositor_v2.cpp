@@ -6,6 +6,7 @@ kompositor_v2::kompositor_v2(QWidget *parent) : QMainWindow(parent)
 {
 	ui.setupUi(this);
 
+	connect(ui.quarterNote, SIGNAL(toggled(bool)), this, SLOT(fjardedelsnotKlickad()));
 	//timer = new QTimer(this);
 	//connect(timer, SIGNAL(timeout()), this, SLOT(update()));
 	//timer->start(10000);
@@ -18,35 +19,28 @@ kompositor_v2::~kompositor_v2()
 
 void kompositor_v2::mousePressEvent(QMouseEvent *e)
 {
-	update();// är som repaint, fast bättre(jonny sa det) / kör paintEvent()
-
-	//Not nyTestNot(500, 6); // Test not, för att se att det funkar att skriva ut 
-	//nyTestNot.skrivUt(100, this); // Hårdkodat 100 som test värde
-
 	if (e->MouseButtonRelease)
 	{
-		//update();
-
 		willDraw = true;
 
-		if (ui.sheet->isEnabled()) //FIXA TILL KORREKT FUNKTION - GOTTA READ SHIT UP ON LABELS
+		if (notTypVal == 1)
 		{
 			int hojd = pixelToHojd(e->y());
-					//TODO: LÄGG TILL I NOTLISTA
-					if (hojd = -1)
-						return;
 
-					//notblad.adderaNot(1, hojd);
+			if (hojd = -1)
+				return;
+
+			notblad.adderaNot(notTypVal, hojd);
 		}
-
-		if (ui.quarterNote->isEnabled()) //DITO
-			fjardedelsnotKlickad();
 	}
+
+	update(); //kör paintEvent()
 }
 
 void kompositor_v2::fjardedelsnotKlickad()
 {
-	notTypVal = 0; //NOLL ÄR LIKA MED FJÄRDEDELSNOT FÖR NU
+	//ui->textEdit->setText("THE LOST TREASURE IS FOUND");
+	notTypVal = 1;
 }
 
 void kompositor_v2::ritaOm()
@@ -55,21 +49,19 @@ void kompositor_v2::ritaOm()
 
 void kompositor_v2::paintEvent(QPaintEvent * e)
 {
-	Not nyTestNot(500, 6); // Test not, för att se att det funkar att skriva ut 
+	//Not nyTestNot(500, 6); // Test not, för att se att det funkar att skriva ut 
 	//nyTestNot.skrivUt(100, this); // Hårdkodat 100 som test värde
 	if (willDraw)
 	{ 
 		//Not nyTestNot(500, 6); // Test not, för att se att det funkar att skriva ut 
-		nyTestNot.skrivUt(100, this); // Hårdkodat 100 som test värde
-		//willDraw = false;
+		//nyTestNot.skrivUt(100, this); // Hårdkodat 100 som test värde
+		willDraw = false;
 	}
 
 	//vector<Not*> notVector = notblad.hämtaNoter();
 
 	//for (int i = 0; i < notVector.size(); i++)
-	//notVector[i]->skrivUt(100, this);
-
-	
+	//notVector[i]->skrivUt(100, this);	
 }
 
 int kompositor_v2::pixelToHojd(int ypixel)

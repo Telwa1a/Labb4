@@ -13,7 +13,8 @@ class Not
 public:
 
 	Not();
-	Not(int lengd, int hojd);
+	Not(int _hojd);
+	Not(int _lengd, int _hojd);
 	void skrivUt(int xPos, QWidget *qw);
 	int skrivUtC(int xPos);
 	void spelaUpp(Synthesizer);
