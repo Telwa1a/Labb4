@@ -83,7 +83,7 @@ void Not::skrivUt(int xPos, QWidget *qw)
 				break;
 
 			default:
-				break;
+				break;//tkrjhlkterjhoitrjhtrjhjhrth
 		}
 
 		QPainter qPainter(qw);
