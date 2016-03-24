@@ -58,10 +58,10 @@ void kompositor_v2::paintEvent(QPaintEvent * e)
 		willDraw = false;
 	}
 
-	//vector<Not*> notVector = notblad.hämtaNoter();
+	vector<Not*> notVector = notblad.hamtaNoter();
 
-	//for (int i = 0; i < notVector.size(); i++)
-	//notVector[i]->skrivUt(100, this);	
+	for (int i = 0; i < notVector.size(); i++)
+	notVector[i]->skrivUt(100, this);	
 }
 
 int kompositor_v2::pixelToHojd(int ypixel)
