@@ -57,51 +57,51 @@ void Not::skrivUt(int xPos, QWidget *qw)
 		switch (_hojd)
 		{
 			case 0:
-				vilkenHojd = 413;
+				vilkenHojd = 375;//501;
 				break;
 
 			case 1:
-				vilkenHojd = 421;
+				vilkenHojd = 365;
 				break;
 
 			case 2:
-				vilkenHojd = 429;
+				vilkenHojd = 355;
 				break;
 
 			case 3:
-				vilkenHojd = 437;
+				vilkenHojd = 345;
 				break;
 
 			case 4:
-				vilkenHojd = 445;
+				vilkenHojd = 337;
 				break;
 
 			case 5:
-				vilkenHojd = 453;
+				vilkenHojd = 330;
 				break;
 
 			case 6:
-				vilkenHojd = 461;
+				vilkenHojd = 325;
 				break;
 
 			case 7:
-				vilkenHojd = 469;
+				vilkenHojd = 315;
 				break;
 
 			case 8:
-				vilkenHojd = 477;
+				vilkenHojd = 305;
 				break;
 
 			case 9:
-				vilkenHojd = 485;
+				vilkenHojd = 298;
 				break;
 
 			case 10:
-				vilkenHojd = 493;
+				vilkenHojd = 289;
 				break;
 
 			case 11:
-				vilkenHojd = 501;
+				vilkenHojd = 283;
 				break;
 
 			default:
