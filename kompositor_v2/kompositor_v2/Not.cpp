@@ -3,14 +3,36 @@
 
 Not::Not()
 {
-	_lengd = 1000;
-	_hojd = -1;
+	_lengd = 500;
+	_hojd = 0;
+
+	if (_hojd > 0)
+	{
+		_bildNot.load("Resources/quater.png");
+	}
+	else
+	{
+		_bildNot.load("Resources/quaterc.png");
+	}
+}
+
+Not::~Not()
+{
 }
 
 Not::Not(int hojd)
 {
-	_lengd = 1000;
+	_lengd = 500;
 	_hojd = hojd;
+
+	if (_hojd > 0)
+	{
+		_bildNot.load("Resources/quater.png");
+	}
+	else
+	{
+		_bildNot.load("Resources/quaterc.png");
+	}
 }
 
 Not::Not(int lengd, int hojd)

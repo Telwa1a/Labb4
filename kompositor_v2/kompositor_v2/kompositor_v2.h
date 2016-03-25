@@ -32,7 +32,7 @@ class kompositor_v2 : public QMainWindow
 		void ritaOm();
 		//void fjardedelsnotKlickad();
 
-		QTimer * timer;
+		//QTimer * timer;
 
 	private:
 

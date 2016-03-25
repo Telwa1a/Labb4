@@ -27,7 +27,7 @@ void kompositor_v2::mousePressEvent(QMouseEvent *e)
 		{
 			int hojd = pixelToHojd(e->y());
 
-			if (hojd = -1)
+			if (hojd == -1)
 				return;
 
 			notblad.adderaNot(notTypVal, hojd);
@@ -51,17 +51,19 @@ void kompositor_v2::paintEvent(QPaintEvent * e)
 {
 	//Not nyTestNot(500, 6); // Test not, för att se att det funkar att skriva ut 
 	//nyTestNot.skrivUt(100, this); // Hårdkodat 100 som test värde
+	//vector<Not*> notVector = notblad.hamtaNoter();
+
 	if (willDraw)
 	{ 
-		//Not nyTestNot(500, 6); // Test not, för att se att det funkar att skriva ut 
+		//Not nyTestNot(500, 2); // Test not, för att se att det funkar att skriva ut 
 		//nyTestNot.skrivUt(100, this); // Hårdkodat 100 som test värde
+		vector<Not*> notVector = notblad.hamtaNoter();
+
+		for (int i = 0; i < notVector.size(); i++)
+			notVector[i]->skrivUt(100, this);
+
 		willDraw = false;
 	}
-
-	vector<Not*> notVector = notblad.hamtaNoter();
-
-	for (int i = 0; i < notVector.size(); i++)
-	notVector[i]->skrivUt(100, this);	
 }
 
 int kompositor_v2::pixelToHojd(int ypixel)
