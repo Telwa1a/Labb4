@@ -7,6 +7,7 @@ kompositor_v2::kompositor_v2(QWidget *parent) : QMainWindow(parent)
 	ui.setupUi(this);
 
 	connect(ui.quarterNote, SIGNAL(toggled(bool)), this, SLOT(fjardedelsnotKlickad()));
+	connect(ui.playButton, SIGNAL(released()), this, SLOT(spelaKlickad()));
 	//timer = new QTimer(this);
 	//connect(timer, SIGNAL(timeout()), this, SLOT(update()));
 	//timer->start(10000);
@@ -43,6 +44,14 @@ void kompositor_v2::fjardedelsnotKlickad()
 	notTypVal = 1;
 }
 
+void kompositor_v2::spelaKlickad()
+{
+	vector<Not*> notVector = notblad.hamtaNoter();
+
+	for (int i = 0; i < notVector.size(); i++)
+		notVector[i]->spelaUpp(&synth);
+}
+
 void kompositor_v2::ritaOm()
 {
 }
@@ -60,7 +69,7 @@ void kompositor_v2::paintEvent(QPaintEvent * e)
 		vector<Not*> notVector = notblad.hamtaNoter();
 
 		for (int i = 0; i < notVector.size(); i++)
-			notVector[i]->skrivUt(100, this);
+			notVector[i]->skrivUt(125 + (25 * i), this);
 
 		willDraw = false;
 	}

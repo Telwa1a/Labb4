@@ -17,7 +17,7 @@ class Not
 
 		void skrivUt(int xPos, QWidget *qw);
 		void skrivUtC(int xPos);
-		void spelaUpp(Synthesizer);
+		void spelaUpp(Synthesizer *synthie);
 
 	private:
 

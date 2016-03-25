@@ -114,9 +114,9 @@ void Not::skrivUt(int xPos, QWidget *qw)
 
 //int Not::skrivUtC(int xPos){}
 
-void Not::spelaUpp(Synthesizer)
+void Not::spelaUpp(Synthesizer *synthie)
 {
-	
+	synthie->spela(_hojd, _lengd, 100);
 }
 
 

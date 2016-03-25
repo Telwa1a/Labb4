@@ -44,6 +44,7 @@ class kompositor_v2 : public QMainWindow
 
 	private slots:
 		void fjardedelsnotKlickad();
+		void spelaKlickad();
 		//void update();
 		//void push();
 };
