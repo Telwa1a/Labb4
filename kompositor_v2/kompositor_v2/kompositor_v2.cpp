@@ -10,7 +10,7 @@ kompositor_v2::kompositor_v2(QWidget *parent) : QMainWindow(parent)
 	//timer = new QTimer(this);
 	//connect(timer, SIGNAL(timeout()), this, SLOT(update()));
 	//timer->start(10000);
-	//connect(ui.playButton, SIGNAL(clicked()), this, SLOT(push()));
+	connect(ui.playButton, SIGNAL(released()), this, SLOT(spelaKlickad()));
 }
 
 kompositor_v2::~kompositor_v2()
@@ -41,6 +41,14 @@ void kompositor_v2::fjardedelsnotKlickad()
 {
 	//ui->textEdit->setText("THE LOST TREASURE IS FOUND");
 	notTypVal = 1;
+}
+
+void kompositor_v2::spelaKlickad()
+{
+	vector<Not*> notVector = notblad.hamtaNoter();
+
+	for (int i = 0; i < notVector.size(); i++)
+		notVector[i]->spelaUpp(&synth);
 }
 
 void kompositor_v2::ritaOm()
