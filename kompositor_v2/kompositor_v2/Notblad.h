@@ -1,4 +1,7 @@
 #pragma once
+#ifndef NOTBLAD_H
+#define NOTBLAD_H
+
 #include <vector>
 #include "Not.h"
 /**
@@ -16,16 +19,17 @@ class Notblad
 	public:
 
 		Notblad();
-
-		//void adderaNot(int typ, int höjd);//Vi måste göra en klass som kan hantera de olika noterna??
+	
+	
 		vector<Not*> hamtaNoter();
 		void adderaNot(int typ, int _hojd);
 
 	private:
 
-		vector<Not*> notVector;
+		vector<Not*> _notVector;
 
 };
 
+#endif // NOTBLAD_H
 
 

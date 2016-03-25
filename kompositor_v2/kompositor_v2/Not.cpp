@@ -1,24 +1,24 @@
 #include "Not.h"
-#include <qpainter>
+#include <QPainter>
 
 Not::Not()
 {
-	lengd = 1000;
-	hojd = -1;
+	_lengd = 1000;
+	_hojd = -1;
 }
 
-Not::Not(int _hojd)
+Not::Not(int hojd)
 {
-	lengd = 1000;
-	hojd = _hojd;
+	_lengd = 1000;
+	_hojd = hojd;
 }
 
-Not::Not(int _lengd, int _hojd)
+Not::Not(int lengd, int hojd)
 {
-	lengd = _lengd;
-	hojd = _hojd;
+	_lengd = lengd;
+	_hojd = hojd;
 
-	if (hojd > 0)
+	if (_hojd > 0)
 	{
 		_bildNot.load("Resources/quater.png");
 	}
@@ -32,7 +32,7 @@ void Not::skrivUt(int xPos, QWidget *qw)
 {
 		int vilkenHojd;
 
-		switch (hojd)
+		switch (_hojd)
 		{
 			case 0:
 				vilkenHojd = 413;
@@ -91,8 +91,10 @@ void Not::skrivUt(int xPos, QWidget *qw)
 }
 
 //int Not::skrivUtC(int xPos){}
+
 void Not::spelaUpp(Synthesizer)
 {
+	
 }
 
 

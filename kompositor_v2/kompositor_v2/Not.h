@@ -1,6 +1,10 @@
 #pragma once
+#ifndef NOT_H
+#define NOT_H
+
+#include <QWidget.h>
 #include "Synthesizer.h"
-#include <qwidget.h>
+
 /**
 * A class representing a point in a three-dimensional plane.
 *
@@ -14,16 +18,20 @@ public:
 
 	Not();
 	Not(int _hojd);
-	Not(int _lengd, int _hojd);
+	Not(int _lengd, int _hojd);//Behöver vi verkligen alla tre?
+
+
 	void skrivUt(int xPos, QWidget *qw);
-	int skrivUtC(int xPos);
+	void skrivUtC(int xPos);
 	void spelaUpp(Synthesizer);
 
 		
 private:
-	int lengd;
-	int hojd;
+	int _lengd;
+	int _hojd;
 	QPixmap _bildNot;
 
 
 };
+
+#endif // NOT_H

@@ -10,6 +10,7 @@ class Synthesizer
 	public:
 		Synthesizer(int intrument = 0);
 		void spela(int hojd, int lengd, int volym);
+
 	private:
 		int Synthesizer::hojdtomidi(int hojd);
 		HMIDIOUT device;
