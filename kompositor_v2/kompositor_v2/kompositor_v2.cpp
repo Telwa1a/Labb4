@@ -60,7 +60,7 @@ void kompositor_v2::paintEvent(QPaintEvent * e)
 		vector<Not*> notVector = notblad.hamtaNoter();
 
 		for (int i = 0; i < notVector.size(); i++)
-			notVector[i]->skrivUt(100, this);
+			notVector[i]->skrivUt(175 + (25 *i), this);
 
 		willDraw = false;
 	}
